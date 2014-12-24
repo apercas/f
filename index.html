@@ -13,7 +13,6 @@ var TIME = Date.now();
 
 var init = function() {
 	var date_now = new Date(TIME)
-
 	, MOMENT = {
 		'h_time' : date_now.getHours(),
 		'm_time' : date_now.getMinutes(),
@@ -27,8 +26,25 @@ var init = function() {
 	return MOMENT;
 }
 
+var print_time = function(res) {
+	var markers = document.getElementsByClassName('mk');
 
+	for (var i=0;i < markers.length; i++) {
+		if (markers[i].classList.contains('h')) {
+			markers[i].innerHTML = res.h_time;
+		} else if (markers[i].classList.contains('m')) {
+			markers[i].innerHTML = res.m_time;
+		} else if (markers[i].classList.contains('s')) {
+			markers[i].innerHTML = res.s_time;
+		} else if (markers[i].classList.contains('d')) {
+			markers[i].innerHTML = res.d_time;
+		} else if (markers[i].classList.contains('c')) {
+			markers[i].innerHTML = res.c_time;
+		}
+	}
+}
 
 var res = init();
+print_time(res);
 </script>
 </html>
