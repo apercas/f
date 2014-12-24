@@ -1,0 +1,34 @@
+<html>
+<h1>F</h1>
+<hr />
+<article>
+	<span class="mk h">0</span>
+	<span class="mk m">0</span>
+	<span class="mk s">0</span>
+	<span class="mk d">0</span>
+	<span class="mk c">0</span>
+</article>
+<script type="text/javascript">
+var TIME = Date.now();
+
+var init = function() {
+	var date_now = new Date(TIME)
+
+	, MOMENT = {
+		'h_time' : date_now.getHours(),
+		'm_time' : date_now.getMinutes(),
+		's_time' : date_now.getSeconds(),
+		'd_time' : TIME.toString().slice(-4).substring(0,2),
+		'c_time' : TIME.toString().slice(-2)
+	}
+
+	console.log(MOMENT)
+
+	return MOMENT;
+}
+
+
+
+var res = init();
+</script>
+</html>
